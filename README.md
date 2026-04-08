@@ -65,3 +65,19 @@ Best Performing Model: Random Forest Classifier
 ---
 
 ## 📁 Project Structure
+
+crop-recommendation-system/
+│
+├── app.py
+├── utils.py
+├── models.py
+├── CONFIG.json
+├── requirements.txt
+├── .gitignore
+├── README.md
+│
+├── data/
+│ └── crop_recommendation_data.csv
+│
+├── models/
+│ └── *.pkl

@@ -95,13 +95,8 @@ def generate_plots(dframe, _type = 'streamlit'):
         for i in data.columns[:-1]:
             st.pyplot(utils.generate_seaborn_plots(dframe, i))
 
-
-
-
-
 if nav=='Analysis':
 	st.title('Crop wise parameter analysis')
-
 	st.markdown('### Following graphs display average value of respective parameter required to grow that specific crop')
 	st.write(" ")
 	generate_plots(data, 'streamlit')

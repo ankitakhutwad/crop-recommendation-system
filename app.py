@@ -6,13 +6,16 @@ import pickle
 import os
 import streamlit as st
 import pandas as pd
-import utils
 
+# Get the absolute path of the directory containing app.py
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
+# Load CONFIG using the absolute path
 with open(os.path.join(BASE_DIR, 'CONFIG.json')) as config_file:
     CONFIG = json.load(config_file)
-path = CONFIG['raw_data_path']
+    
+# Load the CSV using the absolute path
+path = os.path.join(BASE_DIR, CONFIG['raw_data_path'])
 data = pd.read_csv(path)
 _models = utils.load_models()
 models = _models

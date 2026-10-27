@@ -8,7 +8,9 @@ import streamlit as st
 import pandas as pd
 import utils
 
-with open('CONFIG.json') as config_file:
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+with open(os.path.join(BASE_DIR, 'CONFIG.json')) as config_file:
     CONFIG = json.load(config_file)
 path = CONFIG['raw_data_path']
 data = pd.read_csv(path)
